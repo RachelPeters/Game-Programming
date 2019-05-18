@@ -69,7 +69,6 @@ public class MidiPlayer implements MetaEventListener {
         return loop;
     }
 
-
     /**
         Plays a sequence, optionally looping. This method returns
         immediately. The sequence is not played if it is invalid.

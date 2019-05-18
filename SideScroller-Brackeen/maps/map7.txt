@@ -18,4 +18,4 @@ AD                      IIIII                                                   
 AD   I     I                            1    1  1        2                          o o o o o CA
 AD   I     I                  1      IIIIIIIIIIIII               CAAAAAAAAAAAAAAAHF  o o o o  CA
 AD   I  1  I    EBBBBBBBBBBBBBBBF     o o o o o o              * CAAAAAAAAAAAAAAAAD o o o o o CA
-AHBBBBBBBBBBBBBBGAAAAAAAAAAAAAAAHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGAAAAAAAAAAAAAAAAHBBBBBBBBBBBGA
+AHB BBBBBBBBBBBBBGAAAAAAAAAAAAAAAHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGAAAAAAAAAAAAAAAAHBBBBBBBBBBBGA
