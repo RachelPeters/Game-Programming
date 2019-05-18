@@ -91,7 +91,7 @@ public class Game extends GameCore{
 
         midiPlayer = new MidiPlayer();
         Sequence sequence =
-                midiPlayer.getSequence("C:\\Users\\rache\\Documents\\UWI\\Year 3\\Y3S2\\Game Programming\\2019-03-19\\SideScroller-Brackeen\\sounds\\music.midi");
+                midiPlayer.getSequence("C:\\Users\\rache\\Documents\\UWI\\Year 3\\Y3S2\\Game Programming\\2019-03-19\\SideScroller-Brackeen\\sounds\\world.midi");
         midiPlayer.play(sequence, true);
         toggleDrumPlayback();
     }
@@ -330,7 +330,7 @@ public class Game extends GameCore{
             Creature badguy = (Creature)collisionSprite;
             if (canKill) {
                 // kill the badguy and make player bounce
-                //soundManager.play(boopSound);
+                soundManager.play(boopSound);
                 badguy.setState(Creature.STATE_DYING);
                 player.setY(badguy.getY() - player.getHeight());
                 player.jump(true);
@@ -340,6 +340,8 @@ public class Game extends GameCore{
                 player.setState(Creature.STATE_DYING);
                 try {
                     currentMap = resourceManager.loadMap(miniGames.get(currentMinigame).getTileLayout());
+                    miniGames.get(currentMinigame).setScore(0);
+
                 }
                 catch (IOException io){
                     System.out.println(io);
@@ -419,6 +421,16 @@ public class Game extends GameCore{
     }
 
     public void update(long elapsedTime) {
+
+        if (!midiPlayer.getSequencer().isOpen()){
+            midiPlayer.close();
+            midiPlayer = new MidiPlayer();
+            Sequence sequence =
+                    midiPlayer.getSequence("C:\\Users\\rache\\Documents\\UWI\\Year 3\\Y3S2\\Game Programming\\2019-03-19\\SideScroller-Brackeen\\sounds\\world.midi");
+            midiPlayer.play(sequence, true);
+            toggleDrumPlayback();
+        }
+
         Creature player = (Creature)currentMap.getPlayer();
 
         // player is dead! start map over
@@ -468,15 +480,20 @@ public class Game extends GameCore{
             if(!currentMap.equals(worldMap)){
                 miniGames.get(currentMinigame).setScore(miniGames.get(currentMinigame).getScore()+5);
             }
-            points +=5;
         }
         else if (powerUp instanceof PowerUp.Music) {
             // change the music
+            midiPlayer.close();
+            midiPlayer = new MidiPlayer();
+            Sequence sequence =
+                    midiPlayer.getSequence("C:\\Users\\rache\\Documents\\UWI\\Year 3\\Y3S2\\Game Programming\\2019-03-19\\SideScroller-Brackeen\\sounds\\world.midi");
+            midiPlayer.play(sequence, true);
         }
         else if (powerUp instanceof PowerUp.Goal) {
             // go back to world map
             MiniGame mg = miniGames.get(currentMinigame);
             mg.setCompleted(true);
+            points +=mg.getScore();
             renderer.setBackground(resourceManager.loadImage(worldBackground));
             currentMap = worldMap;
         }

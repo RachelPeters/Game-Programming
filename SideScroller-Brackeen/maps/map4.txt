@@ -8,14 +8,14 @@
 #   *       Goal
 #   1       Bad Guy 1 (grub)
 #   2       Bad Guy 2 (fly)
-BF          o o o                o o o o o o o o o o o o o o o o o o o o o o o                EB
-AD         IIIIIII              IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII               CA
-AD                      o o o                                    EBBBBBBBBBBBBBF     o o o o  CA
-AD                     IIIIIII                                   CAAAAAAAAAAAAAD    o o o o o CA
-AD                                                         o o   CAAAAAAAAAAAAAHF    o o o o  CA
-AD                    2   !        2                      IIIII  CAAAAAAAAAAAAAAD   o o o o o CA
-AD                      IIIII                                                                 CA
-AD                                      1    1  1        2                          o o o o o CA
-AD   I     I                  1      IIIIIIIIIIIII               CAAAAAAAAAAAAAAAHF  o o o o  CA
-AD   I  1  I    EBBBBBBBBBBBBBBBF     o o o o o o              * CAAAAAAAAAAAAAAAAD o o o o o CA
-AHBBBBBBBBBBBBBBGAAAAAAAAAAAAAAAHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGAAAAAAAAAAAAAAAAHBBBBBBBBBBBGA
+BF          o o o                o o o o o o o o o o o o o o o o o o o o o o oI
+BF          o o o                o o o o o o o o o o o o o o o o o o o o o o oI
+AD         IIIIIII              IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+AD                      o o o                                    EBBBBBBBBBBBBI
+AD                     IIIIIII                                   CAAAAAAAAAAAAI
+AD                                                         o o   CAAAAAAAAAAAAI
+AD                    2   !        2                      IIIII  CAAAAAAAAAAAAI
+AD                      IIIII                                                 I
+AD                      2               1    1  1        2                    I
+AD   I  1  I  1  2   o o o o o o              * CAAAAAAAAAAAAAAAAD o o o o o CI
+AHBBBBBBBBBBBBBBGAAAAAAAAAAAAAAAHBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBGAAAAAAAAAAAAI

@@ -65,6 +65,10 @@ public class MidiPlayer implements MetaEventListener {
         }
     }
 
+    public boolean getLoop(){
+        return loop;
+    }
+
 
     /**
         Plays a sequence, optionally looping. This method returns
@@ -91,9 +95,11 @@ public class MidiPlayer implements MetaEventListener {
         looping is on.
     */
     public void meta(MetaMessage event) {
+        System.out.println(event.getType());
         if (event.getType() == END_OF_TRACK_MESSAGE) {
             if (sequencer != null && sequencer.isOpen() && loop) {
-                sequencer.start();
+                sequencer.close();
+                //sequencer.start();
             }
         }
     }
